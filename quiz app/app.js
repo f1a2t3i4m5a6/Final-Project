@@ -137,9 +137,10 @@ function showResultBox(){
    let speed=20;
    let progress=setInterval(()=>{
 progressStartValue++;
-//console.log(progressStartValue);
+
 progressValue.textContent=`${progressStartValue}%`;
-circularProgress.computedStyleMap.background=`conic-gradient(#c40094 ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 0.1) 0deg);`
+
+circularProgress.style.background= `conic-gradient(#007cc4 ${progressStartValue* 3.6}deg, rgba(255, 255, 255, 0.1) 0deg)`;
 if(progressStartValue==progressEndValue){
    clearInterval(progress)
 }
